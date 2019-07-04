@@ -81,9 +81,7 @@
       <Name>Global.Class.Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Temporary\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ConvertInCS.txt" />
   </ItemGroup>

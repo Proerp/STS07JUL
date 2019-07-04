@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C6BD9C9-3F6F-41EA-B003-A9F5119FB690}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>ImageS8SongThan</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Untitled-43.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guifreaks.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b9e40ae01dee0076, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guifreaks.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Navisuite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7f6dc13cbca790ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guifreaks.Navisuite.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Navisuite.XmlSerializers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7f6dc13cbca790ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guifreaks.Navisuite.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="JacksonSoft.CustomTabControl, Version=1.0.1.7, Culture=neutral, PublicKeyToken=53c237210c7e462d, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\JacksonSoft.CustomTabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ExceptionMessageBox, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.ExceptionMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonLibrary\CommonFormAction.cs" />
+    <Compile Include="CommonLibrary\CommonInterfaces.cs" />
+    <Compile Include="CommonLibrary\CustomExceptionMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonLibrary\CustomExceptionMessageBox.designer.cs">
+      <DependentUpon>CustomExceptionMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonLibrary\GlobalExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\CommonMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\CommonMDI.designer.cs">
+      <DependentUpon>CommonMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicApplicationLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicApplicationLogon.Designer.cs">
+      <DependentUpon>PublicApplicationLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicSelectDataMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicSelectDataMessage.Designer.cs">
+      <DependentUpon>PublicSelectDataMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\SettingFillingLineData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\SettingFillingLineData.Designer.cs">
+      <DependentUpon>SettingFillingLineData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\DataMessageBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\DataMessageBackup.designer.cs">
+      <DependentUpon>DataMessageBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControllingInterface\MainControllingInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControllingInterface\MainControllingInterface.Designer.cs">
+      <DependentUpon>MainControllingInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControllingInterface\streamInkJet.cs" />
+    <Compile Include="CustomInputBox.cs" />
+    <Compile Include="CommonUserInterface\ManageProductName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\ManageProductName.Designer.cs">
+      <DependentUpon>ManageProductName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicAuthenticationPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicAuthenticationPassword.Designer.cs">
+      <DependentUpon>PublicAuthenticationPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControllingInterface\ControllingInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControllingInterface\ControllingInterface.designer.cs">
+      <DependentUpon>ControllingInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\DataMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\DataMessage.designer.cs">
+      <DependentUpon>DataMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListCategory.designer.cs">
+      <DependentUpon>ListCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListCoil.designer.cs">
+      <DependentUpon>ListCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListEmployee.designer.cs">
+      <DependentUpon>ListEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListProduct.designer.cs">
+      <DependentUpon>ListProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListOwner.designer.cs">
+      <DependentUpon>ListOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListFactory.designer.cs">
+      <DependentUpon>ListFactory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListLogo.designer.cs">
+      <DependentUpon>ListLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicShowDataMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicShowDataMessage.Designer.cs">
+      <DependentUpon>PublicShowDataMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicFind.Designer.cs">
+      <DependentUpon>PublicFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceIcon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceIcon.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StackedHeader\Header.cs" />
+    <Compile Include="StackedHeader\IStackedHeaderGenerator.cs" />
+    <Compile Include="StackedHeader\StackedHeaderDecorator.cs" />
+    <Compile Include="StackedHeader\StackedHeaderGenerator.cs" />
+    <Compile Include="Temporary\Class1.cs" />
+    <Compile Include="Temporary\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temporary\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temporary\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temporary\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\EmployeeCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\EmployeeCategory.Designer.cs">
+      <DependentUpon>EmployeeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\frmMDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\frmMDIMain.Designer.cs">
+      <DependentUpon>frmMDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temporary\frmMDIMain_Old.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\frmMDIMain_Old.Designer.cs">
+      <DependentUpon>frmMDIMain_Old.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicGetServerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonUserInterface\PublicGetServerName.Designer.cs">
+      <DependentUpon>PublicGetServerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temporary\simulateReadfromScanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temporary\simulateReadfromScanner.Designer.cs">
+      <DependentUpon>simulateReadfromScanner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonLibrary\CustomExceptionMessageBox.resx">
+      <DependentUpon>CustomExceptionMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\CommonMDI.resx">
+      <DependentUpon>CommonMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\ManageProductName.resx">
+      <DependentUpon>ManageProductName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\PublicApplicationLogon.resx">
+      <DependentUpon>PublicApplicationLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\PublicAuthenticationPassword.resx">
+      <DependentUpon>PublicAuthenticationPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\PublicSelectDataMessage.resx">
+      <DependentUpon>PublicSelectDataMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\SettingFillingLineData.resx">
+      <DependentUpon>SettingFillingLineData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\DataMessageBackup.resx">
+      <DependentUpon>DataMessageBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControllingInterface\MainControllingInterface.resx">
+      <DependentUpon>MainControllingInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControllingInterface\ControllingInterface.resx">
+      <DependentUpon>ControllingInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\DataMessage.resx">
+      <DependentUpon>DataMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListCategory.resx">
+      <DependentUpon>ListCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListCoil.resx">
+      <DependentUpon>ListCoil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListEmployee.resx">
+      <DependentUpon>ListEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListProduct.resx">
+      <DependentUpon>ListProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListOwner.resx">
+      <DependentUpon>ListOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListFactory.resx">
+      <DependentUpon>ListFactory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\ListLogo.resx">
+      <DependentUpon>ListLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\PublicShowDataMessage.resx">
+      <DependentUpon>PublicShowDataMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\PublicFind.resx">
+      <DependentUpon>PublicFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceIcon.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceIcon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaDataList\EmployeeCategory.resx">
+      <DependentUpon>EmployeeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserInterface\frmMDIMain.resx">
+      <DependentUpon>frmMDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\frmMDIMain_Old.resx">
+      <DependentUpon>frmMDIMain_Old.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CommonUserInterface\PublicGetServerName.resx">
+      <DependentUpon>PublicGetServerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temporary\simulateReadfromScanner.resx">
+      <DependentUpon>simulateReadfromScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BindingListView\BindingListView.csproj">
+      <Project>{75AF36A8-7797-4023-B183-5B63D448420A}</Project>
+      <Name>BindingListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{0A3AD389-92D7-4DD4-BEE5-328DD7D97F1E}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{5E8300FB-DC79-492B-AD8E-ECAA97D59C33}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
+      <Project>{E86A2B28-7FCC-4949-A7BC-2AAF16BA691D}</Project>
+      <Name>DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalClassLibrary\Global.Class.Library.csproj">
+      <Project>{9155B3F9-7EA9-4A64-A7CE-40CC9B02220A}</Project>
+      <Name>Global.Class.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectListView\ObjectListView2010.csproj">
+      <Project>{18FEDA0C-D147-4286-B39A-01204808106A}</Project>
+      <Name>ObjectListView2010</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\install_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallsuccess.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-Normal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop-Normal-Red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect_creating.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect_no.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect %283%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Internet-Connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-disconnect-icone-6892 %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Private.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Burn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-messagebox-warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Burn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Warning1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Get-Info-B.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode-reader.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20130106011449193_easyicon_cn_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode-green-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Honeycomb-Barcode-Scanner-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Land-Play-Stop-Pause-Play-Pressed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jackietran-Rounded-Stop-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconfactory-Echelon-System-ROM.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Misc-Download-Database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Misc-Upload-Database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Files-Download-File %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Alarm-Arrow-Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Alarm-Arrow-Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Blue-Schedule.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deleket-Soft-Scraps-Calendar-Green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Itzikgur-My-Seven-Backup-IBM-Server.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Itzikgur-My-Seven-Network-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cornmanthe3rd-Plex-Internet-chromium.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Security-Login.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archigraphs-Griots-Tear-Gas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-61.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-Free-3d-Printer-Maker-Bot.ico" />
+    <None Include="Resources\Bookmark-add.ico" />
+    <None Include="Resources\3xhumed-Mega-Games-Pack-27-Balls-of-Steel-1.ico" />
+    <Content Include="Resources\Actions-document-print-preview.ico" />
+    <Content Include="Resources\Actions-document-print.ico" />
+    <Content Include="Resources\Actions-edit-find.ico" />
+    <Content Include="Resources\Benjigarner-Softdimension-Excel.ico" />
+    <Content Include="Resources\Blue2010Large.jpg" />
+    <Content Include="Resources\ButtonImageIcon.jpg" />
+    <Content Include="Resources\Check.ico" />
+    <Content Include="Resources\chevron.ico" />
+    <Content Include="Resources\Chevron_Collapse.ico" />
+    <Content Include="Resources\chevron_expand.ico" />
+    <None Include="Resources\chevron_expand2.ico" />
+    <Content Include="Resources\chevron_Right.ico" />
+    <None Include="Resources\Fatcow-Farm-Fresh-Counter.ico" />
+    <None Include="Resources\Toolbar ImageVertial.png" />
+    <None Include="Resources\Untitled-3.ico" />
+    <None Include="Resources\Untitled-7.ico" />
+    <None Include="Resources\Untitled-11.ico" />
+    <None Include="Resources\Untitled-13.ico" />
+    <None Include="Resources\esc.ico" />
+    <None Include="Resources\sign-up.ico" />
+    <None Include="Resources\Status-wallet-open.ico" />
+    <None Include="Resources\Recycle-Bin-full.ico" />
+    <None Include="Resources\refresh1.ico" />
+    <Content Include="Resources\Chromatix-Keyboard-Keys-Esc.ico" />
+    <None Include="Resources\Counter.ico" />
+    <None Include="Resources\Connecting.ico" />
+    <Content Include="Resources\Custom-Icon-Design-Pretty-Office-6-Import-export.ico" />
+    <None Include="Resources\Deleket-Soft-Scraps-Button-Info.ico" />
+    <None Include="Resources\Disconnected.ico" />
+    <None Include="Resources\Danrabbit-Elementary-Button-warning.ico" />
+    <Content Include="Resources\Edit-Text.ico" />
+    <Content Include="Resources\Icons.ico" />
+    <None Include="Resources\InkJetPrinter.ico" />
+    <Content Include="Resources\key %281%29.ico" />
+    <None Include="Resources\Saki-NuoveXT-Actions-ok.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-edit-find.ico" />
+    <None Include="Resources\Kyo-Tux-Delikate-Info.ico" />
+    <None Include="Resources\OnPrinting.ico" />
+    <None Include="Resources\PlayNormal.ico" />
+    <None Include="Resources\MyWarning.ico" />
+    <None Include="Resources\PrintOk.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-system-search.ico" />
+    <Content Include="Untitled-2.ico" />
+    <Content Include="Untitled-43.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E8300FB-DC79-492B-AD8E-ECAA97D59C33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADODatabase.cs" />
+    <Compile Include="DataDetail.cs">
+      <DependentUpon>DataDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataMessageDTS.cs">
+      <DependentUpon>DataMessageDTS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataMessageDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataMessageDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERmgrUIP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERmgrUIP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalUserPermission.cs" />
+    <Compile Include="MetaDataList\ListEmployeeDTS.cs">
+      <DependentUpon>ListEmployeeDTS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MetaDataList\ListEmployeeDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListEmployeeDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListMaintenance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListMaintenance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\EmployeeCategoryDAL.cs" />
+    <Compile Include="MetaDataList\ListCategoryDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListCategoryDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListCoilDTS.cs">
+      <DependentUpon>ListCoilDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListCoilDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListCoilDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListFactoryDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListFactoryDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListLogoDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListLogoDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListOwnerDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListOwnerDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataList\ListProductDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListProductDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OcracleDatabase.cs" />
+    <Compile Include="OcracleDTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OcracleDTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MetaDataList\FillingLineDataDAL.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SQLDatabase.cs" />
+    <Compile Include="TabularTypePackTableAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
+      <Project>{E86A2B28-7FCC-4949-A7BC-2AAF16BA691D}</Project>
+      <Name>DataTransferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalClassLibrary\Global.Class.Library.csproj">
+      <Project>{9155B3F9-7EA9-4A64-A7CE-40CC9B02220A}</Project>
+      <Name>Global.Class.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataDetail.xsc">
+      <DependentUpon>DataDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DataDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataDetail.xss">
+      <DependentUpon>DataDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DataMessageDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataMessageDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ERmgrUIP.xsc">
+      <DependentUpon>ERmgrUIP.xsd</DependentUpon>
+    </None>
+    <None Include="ERmgrUIP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERmgrUIP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ERmgrUIP.xss">
+      <DependentUpon>ERmgrUIP.xsd</DependentUpon>
+    </None>
+    <None Include="DataMessageDTS.xsc">
+      <DependentUpon>DataMessageDTS.xsd</DependentUpon>
+    </None>
+    <None Include="DataMessageDTS.xss">
+      <DependentUpon>DataMessageDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListEmployeeDTS.xsc">
+      <DependentUpon>ListEmployeeDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListEmployeeDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListEmployeeDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListEmployeeDTS.xss">
+      <DependentUpon>ListEmployeeDTS.xsd</DependentUpon>
+    </None>
+    <None Include="ListMaintenance.xsc">
+      <DependentUpon>ListMaintenance.xsd</DependentUpon>
+    </None>
+    <None Include="ListMaintenance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListMaintenance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ListMaintenance.xss">
+      <DependentUpon>ListMaintenance.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListCategoryDTS.xsc">
+      <DependentUpon>ListCategoryDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListCategoryDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListCategoryDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListCategoryDTS.xss">
+      <DependentUpon>ListCategoryDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListCoilDTS.xsc">
+      <DependentUpon>ListCoilDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListCoilDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListCoilDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListCoilDTS.xss">
+      <DependentUpon>ListCoilDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListFactoryDTS.xsc">
+      <DependentUpon>ListFactoryDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListFactoryDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListFactoryDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListFactoryDTS.xss">
+      <DependentUpon>ListFactoryDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListLogoDTS.xsc">
+      <DependentUpon>ListLogoDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListLogoDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListLogoDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListLogoDTS.xss">
+      <DependentUpon>ListLogoDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListOwnerDTS.xsc">
+      <DependentUpon>ListOwnerDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListOwnerDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListOwnerDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListOwnerDTS.xss">
+      <DependentUpon>ListOwnerDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListProductDTS.xsc">
+      <DependentUpon>ListProductDTS.xsd</DependentUpon>
+    </None>
+    <None Include="MetaDataList\ListProductDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListProductDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataList\ListProductDTS.xss">
+      <DependentUpon>ListProductDTS.xsd</DependentUpon>
+    </None>
+    <None Include="OcracleDTS.xsc">
+      <DependentUpon>OcracleDTS.xsd</DependentUpon>
+    </None>
+    <None Include="OcracleDTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OcracleDTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OcracleDTS.xss">
+      <DependentUpon>OcracleDTS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERmgrUIP" targetNamespace="http://tempuri.org/ERmgrUIP.xsd" xmlns:mstns="http://tempuri.org/ERmgrUIP.xsd" xmlns="http://tempuri.org/ERmgrUIP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ERmgrUIPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ERmgrUIPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataAccessLayer.Properties.Settings.GlobalReference.Default.ERmgrUIPConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListItemCommodityTableAdapter" GeneratorDataComponentClassName="ListItemCommodityTableAdapter" Name="ListItemCommodity" UserDataComponentName="ListItemCommodityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListItemCommodity" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CommodityID, Description, DescriptionOfficial
+FROM            ListItemCommodity</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CommodityID" DataSetColumn="CommodityID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DescriptionOfficial" DataSetColumn="DescriptionOfficial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListItemCategoryTableAdapter" GeneratorDataComponentClassName="ListItemCategoryTableAdapter" Name="ListItemCategory" UserDataComponentName="ListItemCategoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListItemCategory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ItemCategoryID, Description
+FROM            ListItemCategory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemCategoryID" DataSetColumn="ItemCategoryID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListCustomerChannelTableAdapter" GeneratorDataComponentClassName="ListCustomerChannelTableAdapter" Name="ListCustomerChannel" UserDataComponentName="ListCustomerChannelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListCustomerChannel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CustomerChannelID, Description
+FROM            ListCustomerChannel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerChannelID" DataSetColumn="CustomerChannelID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListCustomerChannel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillPrimaryChannel" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetPrimaryChannel" GeneratorSourceName="FillPrimaryChannel" GetMethodModifier="Public" GetMethodName="GetPrimaryChannel" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetPrimaryChannel" UserSourceName="FillPrimaryChannel">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CustomerChannelID, Description
+FROM            ListCustomerChannel
+WHERE AncestorID = 0</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListCustomerNameTableAdapter" GeneratorDataComponentClassName="ListCustomerNameTableAdapter" Name="ListCustomerName" UserDataComponentName="ListCustomerNameTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListCustomerName" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CustomerID, Description, DescriptionOfficial
+FROM            ListCustomerName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DescriptionOfficial" DataSetColumn="DescriptionOfficial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListAddressAreaTableAdapter" GeneratorDataComponentClassName="ListAddressAreaTableAdapter" Name="ListAddressArea" UserDataComponentName="ListAddressAreaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListAddressArea" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AddressAreaID, Description
+FROM            ListAddressArea</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AddressAreaID" DataSetColumn="AddressAreaID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListMechanicSchemeTableAdapter" GeneratorDataComponentClassName="ListMechanicSchemeTableAdapter" Name="ListMechanicScheme" UserDataComponentName="ListMechanicSchemeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListMechanicScheme" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MechanicSchemeID, Description, DescriptionOfficial
+FROM            ListMechanicScheme</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MechanicSchemeID" DataSetColumn="MechanicSchemeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DescriptionOfficial" DataSetColumn="DescriptionOfficial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetItemCategoryTableAdapter" GeneratorDataComponentClassName="SPGetItemCategoryTableAdapter" Name="SPGetItemCategory" UserDataComponentName="SPGetItemCategoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetItemCategory" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetItemCategory</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ItemCategoryID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ItemCategoryDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemCategoryID" DataSetColumn="ItemCategoryID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListMarketingProgramGroupTableAdapter" GeneratorDataComponentClassName="ListMarketingProgramGroupTableAdapter" Name="ListMarketingProgramGroup" UserDataComponentName="ListMarketingProgramGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListMarketingProgramGroup" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingProgramGroupID, Description
+FROM            ListMarketingProgramGroup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramGroupID" DataSetColumn="MarketingProgramGroupID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListMarketingProgramTypeTableAdapter" GeneratorDataComponentClassName="ListMarketingProgramTypeTableAdapter" Name="ListMarketingProgramType" UserDataComponentName="ListMarketingProgramTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListMarketingProgramType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingProgramTypeID, Description
+FROM            ListMarketingProgramType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramTypeID" DataSetColumn="MarketingProgramTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListItemTypeTableAdapter" GeneratorDataComponentClassName="ListItemTypeTableAdapter" Name="ListItemType" UserDataComponentName="ListItemTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListItemType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ItemTypeID, Description
+FROM            ListItemType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemTypeID" DataSetColumn="ItemTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListTimeBaseTableAdapter" GeneratorDataComponentClassName="ListTimeBaseTableAdapter" Name="ListTimeBase" UserDataComponentName="ListTimeBaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListTimeBase" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TimeBaseID, Description
+FROM            ListTimeBase</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TimeBaseID" DataSetColumn="TimeBaseID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetItemCommodityTableAdapter" GeneratorDataComponentClassName="SPGetItemCommodityTableAdapter" Name="SPGetItemCommodity" UserDataComponentName="SPGetItemCommodityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetItemCommodity" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetItemCommodity</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CommodityID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@CommodityDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CommodityID" DataSetColumn="CommodityID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DescriptionOfficial" DataSetColumn="DescriptionOfficial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetAddressAreaTableAdapter" GeneratorDataComponentClassName="SPGetAddressAreaTableAdapter" Name="SPGetAddressArea" UserDataComponentName="SPGetAddressAreaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetAddressArea" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetAddressArea</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@AddressAreaID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@AddressAreaDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AddressAreaID" DataSetColumn="AddressAreaID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetCustomerNameTableAdapter" GeneratorDataComponentClassName="SPGetCustomerNameTableAdapter" Name="SPGetCustomerName" UserDataComponentName="SPGetCustomerNameTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetCustomerName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetCustomerName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CustomerID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@CustomerDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DescriptionOfficial" DataSetColumn="DescriptionOfficial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetItemTypeTableAdapter" GeneratorDataComponentClassName="SPGetItemTypeTableAdapter" Name="SPGetItemType" UserDataComponentName="SPGetItemTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetItemType" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetItemType</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ItemTypeID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ItemTypeDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemTypeID" DataSetColumn="ItemTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetMarketingProgramGroupTableAdapter" GeneratorDataComponentClassName="SPGetMarketingProgramGroupTableAdapter" Name="SPGetMarketingProgramGroup" UserDataComponentName="SPGetMarketingProgramGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetMarketingProgramGroup" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetMarketingProgramGroup</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MarketingProgramGroupID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MarketingProgramGroupDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramGroupID" DataSetColumn="MarketingProgramGroupID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetMarketingProgramTypeTableAdapter" GeneratorDataComponentClassName="SPGetMarketingProgramTypeTableAdapter" Name="SPGetMarketingProgramType" UserDataComponentName="SPGetMarketingProgramTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetMarketingProgramType" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetMarketingProgramType</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MarketingProgramTypeID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MarketingProgramTypeDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramTypeID" DataSetColumn="MarketingProgramTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetTimeBaseTableAdapter" GeneratorDataComponentClassName="SPGetTimeBaseTableAdapter" Name="SPGetTimeBase" UserDataComponentName="SPGetTimeBaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetTimeBase" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetTimeBase</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TimeBaseID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@TimeBaseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TimeBaseID" DataSetColumn="TimeBaseID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListMarketingPaymentTermTableAdapter" GeneratorDataComponentClassName="ListMarketingPaymentTermTableAdapter" Name="ListMarketingPaymentTerm" UserDataComponentName="ListMarketingPaymentTermTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListMarketingPaymentTerm" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingPaymentTermID, Description
+FROM            ListMarketingPaymentTerm</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingPaymentTermID" DataSetColumn="MarketingPaymentTermID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetEmployeeMasterTableAdapter" GeneratorDataComponentClassName="SPGetEmployeeMasterTableAdapter" Name="SPGetEmployeeMaster" UserDataComponentName="SPGetEmployeeMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetEmployeeMaster" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetEmployeeMaster</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@EmployeeID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@EmployeeName" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="EmployeeName" DataSetColumn="EmployeeName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetMarketingProgramTableAdapter" GeneratorDataComponentClassName="SPGetMarketingProgramTableAdapter" Name="SPGetMarketingProgram" UserDataComponentName="SPGetMarketingProgramTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetMarketingProgram" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetMarketingProgram</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MarketingProgramID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Reference" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramID" DataSetColumn="MarketingProgramID" />
+              <Mapping SourceColumn="Reference" DataSetColumn="Reference" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetMarketingPaymentTermTableAdapter" GeneratorDataComponentClassName="SPGetMarketingPaymentTermTableAdapter" Name="SPGetMarketingPaymentTerm" UserDataComponentName="SPGetMarketingPaymentTermTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetMarketingPaymentTerm" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetMarketingPaymentTerm</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MarketingPaymentTermID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MarketingPaymentTermDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingPaymentTermID" DataSetColumn="MarketingPaymentTermID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MarketingIncentiveMasterListTableAdapter" GeneratorDataComponentClassName="MarketingIncentiveMasterListTableAdapter" Name="MarketingIncentiveMasterList" UserDataComponentName="MarketingIncentiveMasterListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.MarketingIncentiveMaster" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingIncentiveMaster.MarketingIncentiveID, MarketingIncentiveMaster.MarketingProgramID, MarketingIncentiveMaster.RequestedDate, 
+                         MarketingProgramMaster.Reference + ' [' + MarketingIncentiveMaster.PaymentPeriod + ']' AS PaymentPeriod
+FROM            MarketingIncentiveMaster INNER JOIN
+                         MarketingProgramMaster ON MarketingIncentiveMaster.MarketingProgramID = MarketingProgramMaster.MarketingProgramID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingIncentiveID" DataSetColumn="MarketingIncentiveID" />
+              <Mapping SourceColumn="MarketingProgramID" DataSetColumn="MarketingProgramID" />
+              <Mapping SourceColumn="RequestedDate" DataSetColumn="RequestedDate" />
+              <Mapping SourceColumn="PaymentPeriod" DataSetColumn="PaymentPeriod" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MarketingProgramListTableAdapter" GeneratorDataComponentClassName="MarketingProgramListTableAdapter" Name="MarketingProgramList" UserDataComponentName="MarketingProgramListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP22.dbo.MarketingProgramMaster" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingProgramID, Reference, ReferenceCode, MarketingProgramName
+FROM            MarketingProgramMaster</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingProgramID" DataSetColumn="MarketingProgramID" />
+              <Mapping SourceColumn="Reference" DataSetColumn="Reference" />
+              <Mapping SourceColumn="ReferenceCode" DataSetColumn="ReferenceCode" />
+              <Mapping SourceColumn="MarketingProgramName" DataSetColumn="MarketingProgramName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListMarketingPaymentTypeTableAdapter" GeneratorDataComponentClassName="ListMarketingPaymentTypeTableAdapter" Name="ListMarketingPaymentType" UserDataComponentName="ListMarketingPaymentTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.ListMarketingPaymentType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MarketingPaymentTypeID, Description
+FROM            ListMarketingPaymentType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MarketingPaymentTypeID" DataSetColumn="MarketingPaymentTypeID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetMarketingPaymentType" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetMarketingPaymentType</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MarketingPaymentTypeID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@MarketingPaymentTypeDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SPGetCustomerChannelTableAdapter" GeneratorDataComponentClassName="SPGetCustomerChannelTableAdapter" Name="SPGetCustomerChannel" UserDataComponentName="SPGetCustomerChannelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ERmgrUIPConnectionString (Settings)" DbObjectName="ERmgrUIP.dbo.SPGetCustomerChannel" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SPGetCustomerChannel</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CustomerChannelID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@CustomerChannelDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@PrimaryChannelOnly" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerChannelID" DataSetColumn="CustomerChannelID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ERmgrUIP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ERmgrUIP" msprop:Generator_UserDSName="ERmgrUIP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListItemCommodity" msprop:Generator_TableClassName="ListItemCommodityDataTable" msprop:Generator_TableVarName="tableListItemCommodity" msprop:Generator_TablePropName="ListItemCommodity" msprop:Generator_RowDeletingName="ListItemCommodityRowDeleting" msprop:Generator_UserTableName="ListItemCommodity" msprop:Generator_RowChangingName="ListItemCommodityRowChanging" msprop:Generator_RowEvHandlerName="ListItemCommodityRowChangeEventHandler" msprop:Generator_RowDeletedName="ListItemCommodityRowDeleted" msprop:Generator_RowEvArgName="ListItemCommodityRowChangeEvent" msprop:Generator_RowChangedName="ListItemCommodityRowChanged" msprop:Generator_RowClassName="ListItemCommodityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommodityID" msprop:Generator_ColumnVarNameInTable="columnCommodityID" msprop:Generator_ColumnPropNameInRow="CommodityID" msprop:Generator_ColumnPropNameInTable="CommodityIDColumn" msprop:Generator_UserColumnName="CommodityID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescriptionOfficial" msprop:Generator_ColumnVarNameInTable="columnDescriptionOfficial" msprop:Generator_ColumnPropNameInRow="DescriptionOfficial" msprop:Generator_ColumnPropNameInTable="DescriptionOfficialColumn" msprop:Generator_UserColumnName="DescriptionOfficial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListItemCategory" msprop:Generator_TableClassName="ListItemCategoryDataTable" msprop:Generator_TableVarName="tableListItemCategory" msprop:Generator_TablePropName="ListItemCategory" msprop:Generator_RowDeletingName="ListItemCategoryRowDeleting" msprop:Generator_UserTableName="ListItemCategory" msprop:Generator_RowChangingName="ListItemCategoryRowChanging" msprop:Generator_RowEvHandlerName="ListItemCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="ListItemCategoryRowDeleted" msprop:Generator_RowEvArgName="ListItemCategoryRowChangeEvent" msprop:Generator_RowChangedName="ListItemCategoryRowChanged" msprop:Generator_RowClassName="ListItemCategoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCategoryID" msprop:Generator_ColumnVarNameInTable="columnItemCategoryID" msprop:Generator_ColumnPropNameInRow="ItemCategoryID" msprop:Generator_ColumnPropNameInTable="ItemCategoryIDColumn" msprop:Generator_UserColumnName="ItemCategoryID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListCustomerChannel" msprop:Generator_TableClassName="ListCustomerChannelDataTable" msprop:Generator_TableVarName="tableListCustomerChannel" msprop:Generator_TablePropName="ListCustomerChannel" msprop:Generator_RowDeletingName="ListCustomerChannelRowDeleting" msprop:Generator_UserTableName="ListCustomerChannel" msprop:Generator_RowChangingName="ListCustomerChannelRowChanging" msprop:Generator_RowEvHandlerName="ListCustomerChannelRowChangeEventHandler" msprop:Generator_RowDeletedName="ListCustomerChannelRowDeleted" msprop:Generator_RowEvArgName="ListCustomerChannelRowChangeEvent" msprop:Generator_RowChangedName="ListCustomerChannelRowChanged" msprop:Generator_RowClassName="ListCustomerChannelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerChannelID" msprop:Generator_ColumnVarNameInTable="columnCustomerChannelID" msprop:Generator_ColumnPropNameInRow="CustomerChannelID" msprop:Generator_ColumnPropNameInTable="CustomerChannelIDColumn" msprop:Generator_UserColumnName="CustomerChannelID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListCustomerName" msprop:Generator_TableClassName="ListCustomerNameDataTable" msprop:Generator_TableVarName="tableListCustomerName" msprop:Generator_TablePropName="ListCustomerName" msprop:Generator_RowDeletingName="ListCustomerNameRowDeleting" msprop:Generator_UserTableName="ListCustomerName" msprop:Generator_RowChangingName="ListCustomerNameRowChanging" msprop:Generator_RowEvHandlerName="ListCustomerNameRowChangeEventHandler" msprop:Generator_RowDeletedName="ListCustomerNameRowDeleted" msprop:Generator_RowEvArgName="ListCustomerNameRowChangeEvent" msprop:Generator_RowChangedName="ListCustomerNameRowChanged" msprop:Generator_RowClassName="ListCustomerNameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescriptionOfficial" msprop:Generator_ColumnVarNameInTable="columnDescriptionOfficial" msprop:Generator_ColumnPropNameInRow="DescriptionOfficial" msprop:Generator_ColumnPropNameInTable="DescriptionOfficialColumn" msprop:Generator_UserColumnName="DescriptionOfficial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListAddressArea" msprop:Generator_TableClassName="ListAddressAreaDataTable" msprop:Generator_TableVarName="tableListAddressArea" msprop:Generator_TablePropName="ListAddressArea" msprop:Generator_RowDeletingName="ListAddressAreaRowDeleting" msprop:Generator_UserTableName="ListAddressArea" msprop:Generator_RowChangingName="ListAddressAreaRowChanging" msprop:Generator_RowEvHandlerName="ListAddressAreaRowChangeEventHandler" msprop:Generator_RowDeletedName="ListAddressAreaRowDeleted" msprop:Generator_RowEvArgName="ListAddressAreaRowChangeEvent" msprop:Generator_RowChangedName="ListAddressAreaRowChanged" msprop:Generator_RowClassName="ListAddressAreaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AddressAreaID" msprop:Generator_ColumnVarNameInTable="columnAddressAreaID" msprop:Generator_ColumnPropNameInRow="AddressAreaID" msprop:Generator_ColumnPropNameInTable="AddressAreaIDColumn" msprop:Generator_UserColumnName="AddressAreaID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListMechanicScheme" msprop:Generator_TableClassName="ListMechanicSchemeDataTable" msprop:Generator_TableVarName="tableListMechanicScheme" msprop:Generator_TablePropName="ListMechanicScheme" msprop:Generator_RowDeletingName="ListMechanicSchemeRowDeleting" msprop:Generator_UserTableName="ListMechanicScheme" msprop:Generator_RowChangingName="ListMechanicSchemeRowChanging" msprop:Generator_RowEvHandlerName="ListMechanicSchemeRowChangeEventHandler" msprop:Generator_RowDeletedName="ListMechanicSchemeRowDeleted" msprop:Generator_RowEvArgName="ListMechanicSchemeRowChangeEvent" msprop:Generator_RowChangedName="ListMechanicSchemeRowChanged" msprop:Generator_RowClassName="ListMechanicSchemeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MechanicSchemeID" msprop:Generator_ColumnVarNameInTable="columnMechanicSchemeID" msprop:Generator_ColumnPropNameInRow="MechanicSchemeID" msprop:Generator_ColumnPropNameInTable="MechanicSchemeIDColumn" msprop:Generator_UserColumnName="MechanicSchemeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescriptionOfficial" msprop:Generator_ColumnVarNameInTable="columnDescriptionOfficial" msprop:Generator_ColumnPropNameInRow="DescriptionOfficial" msprop:Generator_ColumnPropNameInTable="DescriptionOfficialColumn" msprop:Generator_UserColumnName="DescriptionOfficial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetItemCategory" msprop:Generator_TableClassName="SPGetItemCategoryDataTable" msprop:Generator_TableVarName="tableSPGetItemCategory" msprop:Generator_TablePropName="SPGetItemCategory" msprop:Generator_RowDeletingName="SPGetItemCategoryRowDeleting" msprop:Generator_UserTableName="SPGetItemCategory" msprop:Generator_RowChangingName="SPGetItemCategoryRowChanging" msprop:Generator_RowEvHandlerName="SPGetItemCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetItemCategoryRowDeleted" msprop:Generator_RowEvArgName="SPGetItemCategoryRowChangeEvent" msprop:Generator_RowChangedName="SPGetItemCategoryRowChanged" msprop:Generator_RowClassName="SPGetItemCategoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCategoryID" msprop:Generator_ColumnVarNameInTable="columnItemCategoryID" msprop:Generator_ColumnPropNameInRow="ItemCategoryID" msprop:Generator_ColumnPropNameInTable="ItemCategoryIDColumn" msprop:Generator_UserColumnName="ItemCategoryID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListMarketingProgramGroup" msprop:Generator_TableClassName="ListMarketingProgramGroupDataTable" msprop:Generator_TableVarName="tableListMarketingProgramGroup" msprop:Generator_TablePropName="ListMarketingProgramGroup" msprop:Generator_RowDeletingName="ListMarketingProgramGroupRowDeleting" msprop:Generator_UserTableName="ListMarketingProgramGroup" msprop:Generator_RowChangingName="ListMarketingProgramGroupRowChanging" msprop:Generator_RowEvHandlerName="ListMarketingProgramGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="ListMarketingProgramGroupRowDeleted" msprop:Generator_RowEvArgName="ListMarketingProgramGroupRowChangeEvent" msprop:Generator_RowChangedName="ListMarketingProgramGroupRowChanged" msprop:Generator_RowClassName="ListMarketingProgramGroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramGroupID" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramGroupID" msprop:Generator_ColumnPropNameInRow="MarketingProgramGroupID" msprop:Generator_ColumnPropNameInTable="MarketingProgramGroupIDColumn" msprop:Generator_UserColumnName="MarketingProgramGroupID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListMarketingProgramType" msprop:Generator_TableClassName="ListMarketingProgramTypeDataTable" msprop:Generator_TableVarName="tableListMarketingProgramType" msprop:Generator_TablePropName="ListMarketingProgramType" msprop:Generator_RowDeletingName="ListMarketingProgramTypeRowDeleting" msprop:Generator_UserTableName="ListMarketingProgramType" msprop:Generator_RowChangingName="ListMarketingProgramTypeRowChanging" msprop:Generator_RowEvHandlerName="ListMarketingProgramTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ListMarketingProgramTypeRowDeleted" msprop:Generator_RowEvArgName="ListMarketingProgramTypeRowChangeEvent" msprop:Generator_RowChangedName="ListMarketingProgramTypeRowChanged" msprop:Generator_RowClassName="ListMarketingProgramTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramTypeID" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramTypeID" msprop:Generator_ColumnPropNameInRow="MarketingProgramTypeID" msprop:Generator_ColumnPropNameInTable="MarketingProgramTypeIDColumn" msprop:Generator_UserColumnName="MarketingProgramTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListItemType" msprop:Generator_TableClassName="ListItemTypeDataTable" msprop:Generator_TableVarName="tableListItemType" msprop:Generator_TablePropName="ListItemType" msprop:Generator_RowDeletingName="ListItemTypeRowDeleting" msprop:Generator_UserTableName="ListItemType" msprop:Generator_RowChangingName="ListItemTypeRowChanging" msprop:Generator_RowEvHandlerName="ListItemTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ListItemTypeRowDeleted" msprop:Generator_RowEvArgName="ListItemTypeRowChangeEvent" msprop:Generator_RowChangedName="ListItemTypeRowChanged" msprop:Generator_RowClassName="ListItemTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemTypeID" msprop:Generator_ColumnVarNameInTable="columnItemTypeID" msprop:Generator_ColumnPropNameInRow="ItemTypeID" msprop:Generator_ColumnPropNameInTable="ItemTypeIDColumn" msprop:Generator_UserColumnName="ItemTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListTimeBase" msprop:Generator_TableClassName="ListTimeBaseDataTable" msprop:Generator_TableVarName="tableListTimeBase" msprop:Generator_TablePropName="ListTimeBase" msprop:Generator_RowDeletingName="ListTimeBaseRowDeleting" msprop:Generator_UserTableName="ListTimeBase" msprop:Generator_RowChangingName="ListTimeBaseRowChanging" msprop:Generator_RowEvHandlerName="ListTimeBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="ListTimeBaseRowDeleted" msprop:Generator_RowEvArgName="ListTimeBaseRowChangeEvent" msprop:Generator_RowChangedName="ListTimeBaseRowChanged" msprop:Generator_RowClassName="ListTimeBaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TimeBaseID" msprop:Generator_ColumnVarNameInTable="columnTimeBaseID" msprop:Generator_ColumnPropNameInRow="TimeBaseID" msprop:Generator_ColumnPropNameInTable="TimeBaseIDColumn" msprop:Generator_UserColumnName="TimeBaseID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetItemCommodity" msprop:Generator_TableClassName="SPGetItemCommodityDataTable" msprop:Generator_TableVarName="tableSPGetItemCommodity" msprop:Generator_TablePropName="SPGetItemCommodity" msprop:Generator_RowDeletingName="SPGetItemCommodityRowDeleting" msprop:Generator_UserTableName="SPGetItemCommodity" msprop:Generator_RowChangingName="SPGetItemCommodityRowChanging" msprop:Generator_RowEvHandlerName="SPGetItemCommodityRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetItemCommodityRowDeleted" msprop:Generator_RowEvArgName="SPGetItemCommodityRowChangeEvent" msprop:Generator_RowChangedName="SPGetItemCommodityRowChanged" msprop:Generator_RowClassName="SPGetItemCommodityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommodityID" msprop:Generator_ColumnVarNameInTable="columnCommodityID" msprop:Generator_ColumnPropNameInRow="CommodityID" msprop:Generator_ColumnPropNameInTable="CommodityIDColumn" msprop:Generator_UserColumnName="CommodityID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescriptionOfficial" msprop:Generator_ColumnVarNameInTable="columnDescriptionOfficial" msprop:Generator_ColumnPropNameInRow="DescriptionOfficial" msprop:Generator_ColumnPropNameInTable="DescriptionOfficialColumn" msprop:Generator_UserColumnName="DescriptionOfficial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetAddressArea" msprop:Generator_TableClassName="SPGetAddressAreaDataTable" msprop:Generator_TableVarName="tableSPGetAddressArea" msprop:Generator_TablePropName="SPGetAddressArea" msprop:Generator_RowDeletingName="SPGetAddressAreaRowDeleting" msprop:Generator_UserTableName="SPGetAddressArea" msprop:Generator_RowChangingName="SPGetAddressAreaRowChanging" msprop:Generator_RowEvHandlerName="SPGetAddressAreaRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetAddressAreaRowDeleted" msprop:Generator_RowEvArgName="SPGetAddressAreaRowChangeEvent" msprop:Generator_RowChangedName="SPGetAddressAreaRowChanged" msprop:Generator_RowClassName="SPGetAddressAreaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AddressAreaID" msprop:Generator_ColumnVarNameInTable="columnAddressAreaID" msprop:Generator_ColumnPropNameInRow="AddressAreaID" msprop:Generator_ColumnPropNameInTable="AddressAreaIDColumn" msprop:Generator_UserColumnName="AddressAreaID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetCustomerName" msprop:Generator_TableClassName="SPGetCustomerNameDataTable" msprop:Generator_TableVarName="tableSPGetCustomerName" msprop:Generator_TablePropName="SPGetCustomerName" msprop:Generator_RowDeletingName="SPGetCustomerNameRowDeleting" msprop:Generator_UserTableName="SPGetCustomerName" msprop:Generator_RowChangingName="SPGetCustomerNameRowChanging" msprop:Generator_RowEvHandlerName="SPGetCustomerNameRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetCustomerNameRowDeleted" msprop:Generator_RowEvArgName="SPGetCustomerNameRowChangeEvent" msprop:Generator_RowChangedName="SPGetCustomerNameRowChanged" msprop:Generator_RowClassName="SPGetCustomerNameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescriptionOfficial" msprop:Generator_ColumnVarNameInTable="columnDescriptionOfficial" msprop:Generator_ColumnPropNameInRow="DescriptionOfficial" msprop:Generator_ColumnPropNameInTable="DescriptionOfficialColumn" msprop:Generator_UserColumnName="DescriptionOfficial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetItemType" msprop:Generator_TableClassName="SPGetItemTypeDataTable" msprop:Generator_TableVarName="tableSPGetItemType" msprop:Generator_TablePropName="SPGetItemType" msprop:Generator_RowDeletingName="SPGetItemTypeRowDeleting" msprop:Generator_UserTableName="SPGetItemType" msprop:Generator_RowChangingName="SPGetItemTypeRowChanging" msprop:Generator_RowEvHandlerName="SPGetItemTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetItemTypeRowDeleted" msprop:Generator_RowEvArgName="SPGetItemTypeRowChangeEvent" msprop:Generator_RowChangedName="SPGetItemTypeRowChanged" msprop:Generator_RowClassName="SPGetItemTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemTypeID" msprop:Generator_ColumnVarNameInTable="columnItemTypeID" msprop:Generator_ColumnPropNameInRow="ItemTypeID" msprop:Generator_ColumnPropNameInTable="ItemTypeIDColumn" msprop:Generator_UserColumnName="ItemTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetMarketingProgramGroup" msprop:Generator_TableClassName="SPGetMarketingProgramGroupDataTable" msprop:Generator_TableVarName="tableSPGetMarketingProgramGroup" msprop:Generator_TablePropName="SPGetMarketingProgramGroup" msprop:Generator_RowDeletingName="SPGetMarketingProgramGroupRowDeleting" msprop:Generator_UserTableName="SPGetMarketingProgramGroup" msprop:Generator_RowChangingName="SPGetMarketingProgramGroupRowChanging" msprop:Generator_RowEvHandlerName="SPGetMarketingProgramGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetMarketingProgramGroupRowDeleted" msprop:Generator_RowEvArgName="SPGetMarketingProgramGroupRowChangeEvent" msprop:Generator_RowChangedName="SPGetMarketingProgramGroupRowChanged" msprop:Generator_RowClassName="SPGetMarketingProgramGroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramGroupID" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramGroupID" msprop:Generator_ColumnPropNameInRow="MarketingProgramGroupID" msprop:Generator_ColumnPropNameInTable="MarketingProgramGroupIDColumn" msprop:Generator_UserColumnName="MarketingProgramGroupID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetMarketingProgramType" msprop:Generator_TableClassName="SPGetMarketingProgramTypeDataTable" msprop:Generator_TableVarName="tableSPGetMarketingProgramType" msprop:Generator_TablePropName="SPGetMarketingProgramType" msprop:Generator_RowDeletingName="SPGetMarketingProgramTypeRowDeleting" msprop:Generator_UserTableName="SPGetMarketingProgramType" msprop:Generator_RowChangingName="SPGetMarketingProgramTypeRowChanging" msprop:Generator_RowEvHandlerName="SPGetMarketingProgramTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetMarketingProgramTypeRowDeleted" msprop:Generator_RowEvArgName="SPGetMarketingProgramTypeRowChangeEvent" msprop:Generator_RowChangedName="SPGetMarketingProgramTypeRowChanged" msprop:Generator_RowClassName="SPGetMarketingProgramTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramTypeID" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramTypeID" msprop:Generator_ColumnPropNameInRow="MarketingProgramTypeID" msprop:Generator_ColumnPropNameInTable="MarketingProgramTypeIDColumn" msprop:Generator_UserColumnName="MarketingProgramTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetTimeBase" msprop:Generator_TableClassName="SPGetTimeBaseDataTable" msprop:Generator_TableVarName="tableSPGetTimeBase" msprop:Generator_TablePropName="SPGetTimeBase" msprop:Generator_RowDeletingName="SPGetTimeBaseRowDeleting" msprop:Generator_UserTableName="SPGetTimeBase" msprop:Generator_RowChangingName="SPGetTimeBaseRowChanging" msprop:Generator_RowEvHandlerName="SPGetTimeBaseRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetTimeBaseRowDeleted" msprop:Generator_RowEvArgName="SPGetTimeBaseRowChangeEvent" msprop:Generator_RowChangedName="SPGetTimeBaseRowChanged" msprop:Generator_RowClassName="SPGetTimeBaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TimeBaseID" msprop:Generator_ColumnVarNameInTable="columnTimeBaseID" msprop:Generator_ColumnPropNameInRow="TimeBaseID" msprop:Generator_ColumnPropNameInTable="TimeBaseIDColumn" msprop:Generator_UserColumnName="TimeBaseID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListMarketingPaymentTerm" msprop:Generator_TableClassName="ListMarketingPaymentTermDataTable" msprop:Generator_TableVarName="tableListMarketingPaymentTerm" msprop:Generator_TablePropName="ListMarketingPaymentTerm" msprop:Generator_RowDeletingName="ListMarketingPaymentTermRowDeleting" msprop:Generator_UserTableName="ListMarketingPaymentTerm" msprop:Generator_RowChangingName="ListMarketingPaymentTermRowChanging" msprop:Generator_RowEvHandlerName="ListMarketingPaymentTermRowChangeEventHandler" msprop:Generator_RowDeletedName="ListMarketingPaymentTermRowDeleted" msprop:Generator_RowEvArgName="ListMarketingPaymentTermRowChangeEvent" msprop:Generator_RowChangedName="ListMarketingPaymentTermRowChanged" msprop:Generator_RowClassName="ListMarketingPaymentTermRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingPaymentTermID" msprop:Generator_ColumnVarNameInTable="columnMarketingPaymentTermID" msprop:Generator_ColumnPropNameInRow="MarketingPaymentTermID" msprop:Generator_ColumnPropNameInTable="MarketingPaymentTermIDColumn" msprop:Generator_UserColumnName="MarketingPaymentTermID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetEmployeeMaster" msprop:Generator_TableClassName="SPGetEmployeeMasterDataTable" msprop:Generator_TableVarName="tableSPGetEmployeeMaster" msprop:Generator_TablePropName="SPGetEmployeeMaster" msprop:Generator_RowDeletingName="SPGetEmployeeMasterRowDeleting" msprop:Generator_UserTableName="SPGetEmployeeMaster" msprop:Generator_RowChangingName="SPGetEmployeeMasterRowChanging" msprop:Generator_RowEvHandlerName="SPGetEmployeeMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetEmployeeMasterRowDeleted" msprop:Generator_RowEvArgName="SPGetEmployeeMasterRowChangeEvent" msprop:Generator_RowChangedName="SPGetEmployeeMasterRowChanged" msprop:Generator_RowClassName="SPGetEmployeeMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
+              <xs:element name="EmployeeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="161" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetMarketingProgram" msprop:Generator_TableClassName="SPGetMarketingProgramDataTable" msprop:Generator_TableVarName="tableSPGetMarketingProgram" msprop:Generator_TablePropName="SPGetMarketingProgram" msprop:Generator_RowDeletingName="SPGetMarketingProgramRowDeleting" msprop:Generator_UserTableName="SPGetMarketingProgram" msprop:Generator_RowChangingName="SPGetMarketingProgramRowChanging" msprop:Generator_RowEvHandlerName="SPGetMarketingProgramRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetMarketingProgramRowDeleted" msprop:Generator_RowEvArgName="SPGetMarketingProgramRowChangeEvent" msprop:Generator_RowChangedName="SPGetMarketingProgramRowChanged" msprop:Generator_RowClassName="SPGetMarketingProgramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramID" msprop:Generator_ColumnPropNameInRow="MarketingProgramID" msprop:Generator_ColumnPropNameInTable="MarketingProgramIDColumn" msprop:Generator_UserColumnName="MarketingProgramID" type="xs:int" />
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetMarketingPaymentTerm" msprop:Generator_TableClassName="SPGetMarketingPaymentTermDataTable" msprop:Generator_TableVarName="tableSPGetMarketingPaymentTerm" msprop:Generator_TablePropName="SPGetMarketingPaymentTerm" msprop:Generator_RowDeletingName="SPGetMarketingPaymentTermRowDeleting" msprop:Generator_UserTableName="SPGetMarketingPaymentTerm" msprop:Generator_RowChangingName="SPGetMarketingPaymentTermRowChanging" msprop:Generator_RowEvHandlerName="SPGetMarketingPaymentTermRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetMarketingPaymentTermRowDeleted" msprop:Generator_RowEvArgName="SPGetMarketingPaymentTermRowChangeEvent" msprop:Generator_RowChangedName="SPGetMarketingPaymentTermRowChanged" msprop:Generator_RowClassName="SPGetMarketingPaymentTermRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingPaymentTermID" msprop:Generator_ColumnVarNameInTable="columnMarketingPaymentTermID" msprop:Generator_ColumnPropNameInRow="MarketingPaymentTermID" msprop:Generator_ColumnPropNameInTable="MarketingPaymentTermIDColumn" msprop:Generator_UserColumnName="MarketingPaymentTermID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MarketingIncentiveMasterList" msprop:Generator_TableClassName="MarketingIncentiveMasterListDataTable" msprop:Generator_TableVarName="tableMarketingIncentiveMasterList" msprop:Generator_TablePropName="MarketingIncentiveMasterList" msprop:Generator_RowDeletingName="MarketingIncentiveMasterListRowDeleting" msprop:Generator_UserTableName="MarketingIncentiveMasterList" msprop:Generator_RowChangingName="MarketingIncentiveMasterListRowChanging" msprop:Generator_RowEvHandlerName="MarketingIncentiveMasterListRowChangeEventHandler" msprop:Generator_RowDeletedName="MarketingIncentiveMasterListRowDeleted" msprop:Generator_RowEvArgName="MarketingIncentiveMasterListRowChangeEvent" msprop:Generator_RowChangedName="MarketingIncentiveMasterListRowChanged" msprop:Generator_RowClassName="MarketingIncentiveMasterListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingIncentiveID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMarketingIncentiveID" msprop:Generator_ColumnPropNameInRow="MarketingIncentiveID" msprop:Generator_ColumnPropNameInTable="MarketingIncentiveIDColumn" msprop:Generator_UserColumnName="MarketingIncentiveID" type="xs:int" />
+              <xs:element name="MarketingProgramID" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramID" msprop:Generator_ColumnPropNameInRow="MarketingProgramID" msprop:Generator_ColumnPropNameInTable="MarketingProgramIDColumn" msprop:Generator_UserColumnName="MarketingProgramID" type="xs:int" />
+              <xs:element name="RequestedDate" msprop:Generator_ColumnVarNameInTable="columnRequestedDate" msprop:Generator_ColumnPropNameInRow="RequestedDate" msprop:Generator_ColumnPropNameInTable="RequestedDateColumn" msprop:Generator_UserColumnName="RequestedDate" type="xs:dateTime" />
+              <xs:element name="PaymentPeriod" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaymentPeriod" msprop:Generator_ColumnPropNameInRow="PaymentPeriod" msprop:Generator_ColumnPropNameInTable="PaymentPeriodColumn" msprop:Generator_UserColumnName="PaymentPeriod" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="163" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MarketingProgramList" msprop:Generator_TableClassName="MarketingProgramListDataTable" msprop:Generator_TableVarName="tableMarketingProgramList" msprop:Generator_TablePropName="MarketingProgramList" msprop:Generator_RowDeletingName="MarketingProgramListRowDeleting" msprop:Generator_UserTableName="MarketingProgramList" msprop:Generator_RowChangingName="MarketingProgramListRowChanging" msprop:Generator_RowEvHandlerName="MarketingProgramListRowChangeEventHandler" msprop:Generator_RowDeletedName="MarketingProgramListRowDeleted" msprop:Generator_RowEvArgName="MarketingProgramListRowChangeEvent" msprop:Generator_RowChangedName="MarketingProgramListRowChanged" msprop:Generator_RowClassName="MarketingProgramListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingProgramID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramID" msprop:Generator_ColumnPropNameInRow="MarketingProgramID" msprop:Generator_ColumnPropNameInTable="MarketingProgramIDColumn" msprop:Generator_UserColumnName="MarketingProgramID" type="xs:int" />
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReferenceCode" msprop:Generator_ColumnVarNameInTable="columnReferenceCode" msprop:Generator_ColumnPropNameInRow="ReferenceCode" msprop:Generator_ColumnPropNameInTable="ReferenceCodeColumn" msprop:Generator_UserColumnName="ReferenceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MarketingProgramName" msprop:Generator_ColumnVarNameInTable="columnMarketingProgramName" msprop:Generator_ColumnPropNameInRow="MarketingProgramName" msprop:Generator_ColumnPropNameInTable="MarketingProgramNameColumn" msprop:Generator_UserColumnName="MarketingProgramName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListMarketingPaymentType" msprop:Generator_TableClassName="ListMarketingPaymentTypeDataTable" msprop:Generator_TableVarName="tableListMarketingPaymentType" msprop:Generator_TablePropName="ListMarketingPaymentType" msprop:Generator_RowDeletingName="ListMarketingPaymentTypeRowDeleting" msprop:Generator_UserTableName="ListMarketingPaymentType" msprop:Generator_RowChangingName="ListMarketingPaymentTypeRowChanging" msprop:Generator_RowEvHandlerName="ListMarketingPaymentTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ListMarketingPaymentTypeRowDeleted" msprop:Generator_RowEvArgName="ListMarketingPaymentTypeRowChangeEvent" msprop:Generator_RowChangedName="ListMarketingPaymentTypeRowChanged" msprop:Generator_RowClassName="ListMarketingPaymentTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MarketingPaymentTypeID" msprop:Generator_ColumnVarNameInTable="columnMarketingPaymentTypeID" msprop:Generator_ColumnPropNameInRow="MarketingPaymentTypeID" msprop:Generator_ColumnPropNameInTable="MarketingPaymentTypeIDColumn" msprop:Generator_UserColumnName="MarketingPaymentTypeID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGetCustomerChannel" msprop:Generator_TableClassName="SPGetCustomerChannelDataTable" msprop:Generator_TableVarName="tableSPGetCustomerChannel" msprop:Generator_TablePropName="SPGetCustomerChannel" msprop:Generator_RowDeletingName="SPGetCustomerChannelRowDeleting" msprop:Generator_UserTableName="SPGetCustomerChannel" msprop:Generator_RowChangingName="SPGetCustomerChannelRowChanging" msprop:Generator_RowEvHandlerName="SPGetCustomerChannelRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGetCustomerChannelRowDeleted" msprop:Generator_RowEvArgName="SPGetCustomerChannelRowChangeEvent" msprop:Generator_RowChangedName="SPGetCustomerChannelRowChanged" msprop:Generator_RowClassName="SPGetCustomerChannelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerChannelID" msprop:Generator_ColumnVarNameInTable="columnCustomerChannelID" msprop:Generator_ColumnPropNameInRow="CustomerChannelID" msprop:Generator_ColumnPropNameInTable="CustomerChannelIDColumn" msprop:Generator_UserColumnName="CustomerChannelID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListItemCommodity" />
+      <xs:field xpath="mstns:CommodityID" />
+    </xs:unique>
+    <xs:unique name="ListItemCategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListItemCategory" />
+      <xs:field xpath="mstns:ItemCategoryID" />
+    </xs:unique>
+    <xs:unique name="ListCustomerChannel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListCustomerChannel" />
+      <xs:field xpath="mstns:CustomerChannelID" />
+    </xs:unique>
+    <xs:unique name="ListCustomerName_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListCustomerName" />
+      <xs:field xpath="mstns:CustomerID" />
+    </xs:unique>
+    <xs:unique name="ListAddressArea_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListAddressArea" />
+      <xs:field xpath="mstns:AddressAreaID" />
+    </xs:unique>
+    <xs:unique name="ListMechanicScheme_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListMechanicScheme" />
+      <xs:field xpath="mstns:MechanicSchemeID" />
+    </xs:unique>
+    <xs:unique name="SPGetItemCategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetItemCategory" />
+      <xs:field xpath="mstns:ItemCategoryID" />
+    </xs:unique>
+    <xs:unique name="ListMarketingProgramGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListMarketingProgramGroup" />
+      <xs:field xpath="mstns:MarketingProgramGroupID" />
+    </xs:unique>
+    <xs:unique name="ListMarketingProgramType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListMarketingProgramType" />
+      <xs:field xpath="mstns:MarketingProgramTypeID" />
+    </xs:unique>
+    <xs:unique name="ListItemType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListItemType" />
+      <xs:field xpath="mstns:ItemTypeID" />
+    </xs:unique>
+    <xs:unique name="ListTimeBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListTimeBase" />
+      <xs:field xpath="mstns:TimeBaseID" />
+    </xs:unique>
+    <xs:unique name="SPGetItemCommodity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetItemCommodity" />
+      <xs:field xpath="mstns:CommodityID" />
+    </xs:unique>
+    <xs:unique name="SPGetAddressArea_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetAddressArea" />
+      <xs:field xpath="mstns:AddressAreaID" />
+    </xs:unique>
+    <xs:unique name="SPGetCustomerName_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetCustomerName" />
+      <xs:field xpath="mstns:CustomerID" />
+    </xs:unique>
+    <xs:unique name="SPGetItemType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetItemType" />
+      <xs:field xpath="mstns:ItemTypeID" />
+    </xs:unique>
+    <xs:unique name="SPGetMarketingProgramGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetMarketingProgramGroup" />
+      <xs:field xpath="mstns:MarketingProgramGroupID" />
+    </xs:unique>
+    <xs:unique name="SPGetMarketingProgramType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetMarketingProgramType" />
+      <xs:field xpath="mstns:MarketingProgramTypeID" />
+    </xs:unique>
+    <xs:unique name="SPGetTimeBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetTimeBase" />
+      <xs:field xpath="mstns:TimeBaseID" />
+    </xs:unique>
+    <xs:unique name="ListMarketingPaymentTerm_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListMarketingPaymentTerm" />
+      <xs:field xpath="mstns:MarketingPaymentTermID" />
+    </xs:unique>
+    <xs:unique name="SPGetEmployeeMaster_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetEmployeeMaster" />
+      <xs:field xpath="mstns:EmployeeID" />
+    </xs:unique>
+    <xs:unique name="SPGetMarketingProgram_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetMarketingProgram" />
+      <xs:field xpath="mstns:MarketingProgramID" />
+    </xs:unique>
+    <xs:unique name="SPGetMarketingPaymentTerm_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetMarketingPaymentTerm" />
+      <xs:field xpath="mstns:MarketingPaymentTermID" />
+    </xs:unique>
+    <xs:unique name="MarketingIncentiveMasterList_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MarketingIncentiveMasterList" />
+      <xs:field xpath="mstns:MarketingIncentiveID" />
+    </xs:unique>
+    <xs:unique name="MarketingProgramList_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MarketingProgramList" />
+      <xs:field xpath="mstns:MarketingProgramID" />
+    </xs:unique>
+    <xs:unique name="ListMarketingPaymentType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListMarketingPaymentType" />
+      <xs:field xpath="mstns:MarketingPaymentTypeID" />
+    </xs:unique>
+    <xs:unique name="SPGetCustomerChannel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SPGetCustomerChannel" />
+      <xs:field xpath="mstns:CustomerChannelID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

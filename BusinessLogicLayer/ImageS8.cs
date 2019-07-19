@@ -443,7 +443,7 @@ namespace BusinessLogicLayer.BarcodeScanner
             if (GlobalVariables.AX350)
                 this.WriteToStream(stringToWrite);
             else
-                this.SendToDOMINO(stringToWrite);
+                this.ioPortRS232ImageS8.SendToSerial(stringToWrite);
         }
 
         public bool ReadFromDOMINO(bool waitForACK)
